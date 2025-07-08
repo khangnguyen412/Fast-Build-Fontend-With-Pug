@@ -42,7 +42,7 @@ function scripts() {
 
 function images() {
     return gulp.src('./src/images/**/*')
-        .pipe(imagemin())
+        .pipe(imagemin(), { encoding: false })
         .pipe(gulp.dest('./templates/images'));
 }
 
